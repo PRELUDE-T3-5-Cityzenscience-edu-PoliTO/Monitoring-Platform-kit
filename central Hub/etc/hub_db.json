@@ -1,9 +1,9 @@
 {
     "description": "Welcome to central HUB",
     "hub_ID": "MP-A0000x",
-    "inactiveTime": 80,
+    "inactiveTime": 1800,
     "client_ID": "MP-A0000x",
-    "service_catalog":"http://192.168.1.130:8080/Monitoring-Platform/services",
+    "service_catalog":"https://services-mp.eu.ngrok.io/Monitoring-Platform/services",
     "service":"/Monitoring-Platform/hub",
     "last_update": null,
     "broker": [],
