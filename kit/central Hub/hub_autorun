@@ -1,3 +1,0 @@
-#! /bin/bash
-
-xterm -e "python3 hub.py etc/hub_db.json" 
