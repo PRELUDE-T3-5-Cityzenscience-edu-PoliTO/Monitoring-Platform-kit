@@ -1,6 +1,0 @@
-#! /bin/bash
-cd "central Hub"
-./hub_autorun &
-sleep 5
-cd ../room
-./room_autorun
