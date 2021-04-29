@@ -1,0 +1,11 @@
+#! /bin/bash
+#! /bin/bash
+xterm -e "main.py etc/room_setup.json ds18b20 4" &
+sleep 1
+xterm -e "main.py etc/room_setup.json dht11 17" &
+sleep 1
+xterm -e "main.py etc/room_setup.json revC /dev/ttyACM0" &
+sleep 1
+xterm -e "main.py etc/room_setup.json max76675 /dev/ttyACM0" 
+
+
