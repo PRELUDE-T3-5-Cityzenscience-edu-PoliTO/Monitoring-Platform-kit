@@ -1,6 +1,0 @@
-#! /bin/bash
-cd "Desktop/kit"
-cd "central Hub"
-python3 hub.py etc/hub_db.json & 
-sleep 5
-cd ../room
