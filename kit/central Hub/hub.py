@@ -18,6 +18,7 @@ class HUB():
         time.sleep(0.5)
         self.setup()
 
+
     def retrieveBroker(self):
         print("Retrieving broker information...")
         try:
@@ -122,11 +123,19 @@ class HUB_REST():
 
         else:
             output=self.hubCatalog.retrieveInfo('description')
-        return json.dumps(output) 
+        return json.dumps(output)
+
+def get_ip_address():
+     ip_address = '';
+     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+     s.connect(("8.8.8.8",80))
+     ip_address = s.getsockname()[0]
+     s.close()
+     return ip_address
 
 if __name__ == '__main__':
     db=sys.argv[1]
-    IP=socket.gethostbyname(socket.gethostname())
+    IP=get_ip_address()
     hub=HUB_REST(db,IP)
     conf = {
         '/': {

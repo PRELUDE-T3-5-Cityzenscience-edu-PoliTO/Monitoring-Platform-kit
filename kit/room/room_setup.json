@@ -1,5 +1,11 @@
 {
     "description": "Room settings",
-    "hub_catalog": "http://192.168.1.131:9090/Monitoring-Platform/hub",
-    "room_info": {}
+    "hub_port": 9090,
+    "room_info": {
+        "room_ID": "room_X2",
+        "room_name": "Meeting",
+        "connection_flag": true,
+        "devices": [],
+        "connection_timestamp": 1619709208.0569108
+    }
 }
