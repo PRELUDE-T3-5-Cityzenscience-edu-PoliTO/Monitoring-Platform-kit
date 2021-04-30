@@ -5,6 +5,7 @@ import sys
 import time
 import os
 import requests
+from urllib.parse import urlparse
 
 class HUB():
     def __init__(self,db_filename):
@@ -23,8 +24,9 @@ class HUB():
         print("Retrieving broker information...")
         try:
             requestBroker=requests.get(self.serviceCatalogAddress+'/public/broker').json()
-            IP=requestBroker.get('IP_address')
-            msg={"IP_address":IP}
+            port=urlparse(requestBroker.get('IP_address')).port
+            IP=urlparse(requestBroker.get('IP_address')).netloc.replace(":"+str(port),"")
+            msg={"IP_address":IP,"port":port}
             self.hubContent["broker"].append(msg)
             print("Broker info obtained.")
         except IndexError as e:
