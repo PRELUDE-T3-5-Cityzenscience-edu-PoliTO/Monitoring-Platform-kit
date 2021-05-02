@@ -8,16 +8,17 @@ import requests
 from urllib.parse import urlparse
 
 class HUB():
-    def __init__(self,db_filename):
+    def __init__(self,db_filename,IP):
         self.db_filename=db_filename
         self.hubContent=json.load(open(self.db_filename,"r"))
         self.service=self.hubContent['service']
         self.serviceCatalogAddress=self.hubContent['service_catalog']
         self.hub_ID=self.hubContent['hub_ID']
+        self.port=self.hubContent["IP_port"]
         self.rooms=self.hubContent['rooms']
         self.retrieveBroker()
         time.sleep(0.5)
-        self.setup()
+        self.setup(IP)
 
 
     def retrieveBroker(self):
@@ -32,14 +33,14 @@ class HUB():
         except IndexError as e:
             print("Broker info not obtained.")
             
-    def setup(self):
+    def setup(self,hub_IP):
         print("Connecting...")
         try:
             requestResourcesCatalog=requests.get(self.serviceCatalogAddress+'/public/server_catalog').json()
             IP=requestResourcesCatalog.get('IP_address')
             service=requestResourcesCatalog.get('service')
             self.hubContent['server_catalog']=self.buildAddress(IP,service)
-            json_body={"platform_ID":self.hub_ID,"rooms":self.rooms}
+            json_body={"platform_ID":self.hub_ID,"rooms":self.rooms,'local_IP':"http://"+hub_IP+":"+str(self.port)+self.service}
             requests.put(self.hubContent['server_catalog']+'/insertPlatform',json=json_body)
             print("Connection performed")
         except:
@@ -91,9 +92,9 @@ class HUB():
 class HUB_REST():
     exposed=True
     def __init__(self,db_filename,IP):
-        self.hubCatalog=HUB(db_filename)
         self.IP=IP
-        self.port=self.hubCatalog.hubContent["IP_port"]
+        self.hubCatalog=HUB(db_filename,self.IP)
+        self.port=self.hubCatalog.port
 
     def GET(self, *uri):
         if len(uri)>0:
@@ -111,11 +112,15 @@ class HUB_REST():
             elif len(uri)==1 and uri[0]=='drivers':
                 raise cherrypy.HTTPError(405,"You can't!")
 
-            elif len(uri)==1 and uri[0]=='runRoom':
-                print("Running the room script...")
-                os.chdir("../room")
-                time.sleep(0.5)
-                os.system("python3 prova.py")
+            elif len(uri)==1 and uri[0]=='reboot':
+                print("Rebooting...")
+                time.sleep(2.5)
+                os.system("sudo reboot")
+                output=True
+            elif len(uri)==1 and uri[0]=='poweroff':
+                print("Shutdown...")
+                time.sleep(2.5)
+                os.system("sudo poweroff")
                 output=True
             else:
                 if info is not False:
