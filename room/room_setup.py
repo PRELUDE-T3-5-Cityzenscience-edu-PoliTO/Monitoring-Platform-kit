@@ -70,7 +70,7 @@ class RoomConfiguration(object):
     def connection(self):
         try:
             resourcesAddress=self.findService('server_catalog')
-            server_msg={"room_ID":self.room_ID,"room_name":self.room_name,"MRT":None,"Icl_clo":None,"M_met":None,"W_met":None,"devices":self.roomContent['room_info']['devices']}
+            server_msg={"room_ID":self.room_ID,"room_name":self.room_name,"MRT":None,"Icl_clo":0.8,"M_met":1.2,"W_met":0,"devices":self.roomContent['room_info']['devices']}
             requests.put(f'{resourcesAddress}/insertRoom/{self.hub_ID}',json=server_msg)
             return True
         except:
