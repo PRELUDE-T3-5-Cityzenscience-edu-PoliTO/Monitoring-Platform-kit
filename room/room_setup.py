@@ -21,6 +21,8 @@ class RoomConfiguration(object):
         self.room_name=self.roomContent['room_info']['room_name']
         
         self.hubAddress="http://"+ get_ip_address()+":"+str(self.roomContent["hub_port"]) +"/Monitoring-Platform/hub"
+        self.roomContent['hub_catalog']=self.hubAddress
+        self.save()
         self.timestamp=time.time()
          
 
