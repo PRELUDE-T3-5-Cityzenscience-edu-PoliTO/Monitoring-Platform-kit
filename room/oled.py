@@ -180,7 +180,7 @@ if __name__=='__main__':
     if myOLED.configuration():
         myOLED.run()
         time.sleep(1)
-        myOLED.follow(myOLED.hub_ID+"/"+myOLED.room_ID+"/")
+        myOLED.follow(myOLED.hub_ID+"/"+myOLED.room_ID+"/#")
     """
     
     myOLED=OLED("DISPLAY")
