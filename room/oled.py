@@ -89,7 +89,7 @@ class OLED():
         if(parameter=="wind"):
             self.wind=value
         if(parameter=="humidity"):
-            self.hum=value
+            self.hum=round(value,2)
             #self.draw.text((self.x+6, self.top+16),    str("Hum.")+ "    " + str(value)+unit,  font=self.font, fill=255)
         if(parameter=="pmv"):
             self.pmv=round(value,2)
