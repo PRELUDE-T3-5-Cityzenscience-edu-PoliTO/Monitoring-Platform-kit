@@ -177,21 +177,14 @@ if __name__=='__main__':
     
     filename=sys.argv[1]
     myOLED=OLED(filename,"DISPLAY")
+    myOLED.initializeDisplay()
     if myOLED.configuration():
         myOLED.run()
         time.sleep(1)
         myOLED.follow(myOLED.hub_ID+"/"+myOLED.room_ID+"/#")
-    """
-    
-    myOLED=OLED("DISPLAY")
-    myOLED.broker_IP="0.tcp.eu.ngrok.io"
-    myOLED.broker_port=17553
-    myOLED.initializeDisplay()
-    myOLED.run()
-    myOLED.follow("MP-A00003/room_X2/#")
-    """
-       
-    
+
     while True:
         time.sleep(3)
+    myOLED.draw.rectangle((0,0,self.disp.width,self.disp.height), outline=0, fill=0)
+    myOLED.disp.display()
     myOLED.stop()
