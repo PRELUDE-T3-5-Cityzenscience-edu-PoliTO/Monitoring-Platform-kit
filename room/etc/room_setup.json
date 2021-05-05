@@ -1,12 +1,12 @@
 {
     "description": "Room settings",
     "hub_port": 9090,
-    "hub_catalog":null,
+    "hub_catalog": "http://192.168.1.100:9090/Monitoring-Platform/hub",
     "room_info": {
-        "room_ID": "room_X",
-        "room_name": "room_X",
-        "connection_flag": false,
+        "room_ID": "room_X2",
+        "room_name": "Laboratorio",
+        "connection_flag": true,
         "devices": [],
-        "connection_timestamp": null
+        "connection_timestamp": 1620216448.1346889
     }
 }
