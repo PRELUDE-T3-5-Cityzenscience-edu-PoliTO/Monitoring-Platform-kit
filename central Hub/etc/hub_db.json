@@ -1,10 +1,10 @@
 {
     "description": "Welcome to central HUB",
-    "hub_ID": "MP-A00002",
+    "hub_ID": null,
     "IP_address": "",
     "IP_port": 9090,
     "inactiveTime": 1800,
-    "client_ID": "MP-A00002",
+    "client_ID": null,
     "service_catalog": "https://services-mp.eu.ngrok.io/Monitoring-Platform/services",
     "service": "/Monitoring-Platform/hub",
     "last_update": null,
