@@ -12,7 +12,7 @@ class dht22(SensorPublisher):
         humidity, temperature = Adafruit_DHT.read_retry(self.DHT22, self.DHT22_PIN, retries=2, delay_seconds=3)
         #outputResult=[{'parameter':'humidity','value':humidity},{'parameter':'temperature','value':temperature}]
         if humidity is not None:
-            if humidity<=100:
+            if (humidity<=100):
                 outputResult=[{'parameter':'humidity','value':humidity}]
                 return outputResult
             
