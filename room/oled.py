@@ -76,44 +76,47 @@ class OLED():
     def follow(self,topic):
         self.client.mySubscribe(topic)
     def notify(self,topic,msg):
-        payload=json.loads(msg)
-        parameter=payload['parameter']
-        value=payload['value']
-        unit=payload['unit']
-        timestamp=payload['timestamp']
-                
-        print(f'{parameter}:{value} {unit} - {timestamp}')
-        if(parameter=="temperature"):
-            self.temp=round(value,2)
-            #self.draw.text((self.x+6, self.top+8),     str("Temp.")+ "   " + str(value)+"°"+unit, font=self.font, fill=255)
-        if(parameter=="wind"):
-            self.wind=value
-        if(parameter=="humidity"):
-            self.hum=round(value,2)
-            #self.draw.text((self.x+6, self.top+16),    str("Hum.")+ "    " + str(value)+unit,  font=self.font, fill=255)
-        if(parameter=="pmv"):
-            self.pmv=round(value,2)
-            if(value>=-0.5 and value <=0.5):
-                self.PMV="GOOD"
-            elif(value<-0.5 and value >=-1.5):
-                self.PMV="COOL"
-            elif(value<-1.5):
-                self.PMV="COLD"
-            elif(value>-0.5 and value <=1.5):
-                self.PMV="WARM"
-            elif(value>1.5):
-                self.PMV="HOT"
-            else:
-                self.PMV="NONE"
-        self.draw.rectangle((0,0,self.disp.width,self.disp.height), outline=0, fill=0)
-        self.draw.text((self.x+6, self.top+8),     str("Temp.")+ "   " + str(self.temp)+"°C", font=self.font, fill=255)
-        self.draw.text((self.x+6, self.top+25),    str("Wind")+ "    " + str(self.wind)+" "+"kmH",  font=self.font, fill=255)        
-        self.draw.text((self.x+6, self.top),       "PMV:    " +str(self.pmv)+"  "+ str(self.PMV),  font=self.font, fill=255)
-        self.draw.text((self.x+6, self.top+16),    str("Hum.")+ "    " + str(self.hum)+"%",  font=self.font, fill=255)
-        # Display image.
-        self.disp.image(self.image)
-        self.disp.display()
-        time.sleep(.1)
+        try:
+            payload=json.loads(msg)
+            parameter=payload['parameter']
+            value=payload['value']
+            unit=payload['unit']
+            timestamp=payload['timestamp']
+                    
+            print(f'{parameter}:{value} {unit} - {timestamp}')
+            if(parameter=="temperature"):
+                self.temp=round(value,2)
+                #self.draw.text((self.x+6, self.top+8),     str("Temp.")+ "   " + str(value)+"°"+unit, font=self.font, fill=255)
+            if(parameter=="wind"):
+                self.wind=value
+            if(parameter=="humidity"):
+                self.hum=round(value,2)
+                #self.draw.text((self.x+6, self.top+16),    str("Hum.")+ "    " + str(value)+unit,  font=self.font, fill=255)
+            if(parameter=="pmv"):
+                self.pmv=round(value,2)
+                if(value>=-0.5 and value <=0.5):
+                    self.PMV="GOOD"
+                elif(value<-0.5 and value >=-1.5):
+                    self.PMV="COOL"
+                elif(value<-1.5):
+                    self.PMV="COLD"
+                elif(value>-0.5 and value <=1.5):
+                    self.PMV="WARM"
+                elif(value>1.5):
+                    self.PMV="HOT"
+                else:
+                    self.PMV="NONE"
+            self.draw.rectangle((0,0,self.disp.width,self.disp.height), outline=0, fill=0)
+            self.draw.text((self.x+6, self.top+8),     str("Temp.")+ "   " + str(self.temp)+"°C", font=self.font, fill=255)
+            self.draw.text((self.x+6, self.top+25),    str("Wind")+ "    " + str(self.wind)+" "+"kmH",  font=self.font, fill=255)        
+            self.draw.text((self.x+6, self.top),       "PMV:    " +str(self.pmv)+"  "+ str(self.PMV),  font=self.font, fill=255)
+            self.draw.text((self.x+6, self.top+16),    str("Hum.")+ "    " + str(self.hum)+"%",  font=self.font, fill=255)
+            # Display image.
+            self.disp.image(self.image)
+            self.disp.display()
+            time.sleep(.1)
+        except:
+            pass
             
 
     def initializeDisplay(self):
