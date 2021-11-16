@@ -117,6 +117,7 @@ Open the application, fill the form and sign-in. Use >Add Platform button.
 Reboot the Rasperry Pi (within 5 minutes) and the association will be automatically completed without additional steps. \
 If the association fails, run 
 > autorun 
+
 or 
 > reboot
 
