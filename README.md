@@ -114,7 +114,7 @@ python3 install.py
 Open the application, fill the form and sign-in. Use >Add Platform button.
 
 ### Final association
-Reboot the Rasperry Pi (within 5 minutes) and the association will be automatically completed without additional steps. \
+Reboot the Rasperry Pi (within 5 minutes) and the association will be automatically completed without additional steps.
 
 If the association fails, run: 
 > autorun 
@@ -126,7 +126,7 @@ or
 
 ### Associate a new platform
 
-When all services are up, new platforms can be installed. Each platform is composed by a **central HUB**, locally exposed for the REST communication with present rooms. It actually ping the back-end to be added to the catalog. Then, a room can be configured.\
+When all services are up, new platforms can be installed. Each platform is composed by a **central HUB**, locally exposed for the REST communication with present rooms. It actually ping the back-end to be added to the catalog. Then, a room can be configured.
 
 **IMPORTANT**: the idea is that a virtual instance is created from the client (i.e. the mobile application), appended to the *profiles catalog* of the specific platform with:
 ``
