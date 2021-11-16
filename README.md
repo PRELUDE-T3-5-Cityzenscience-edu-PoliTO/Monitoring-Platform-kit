@@ -67,6 +67,19 @@ A possible implementation of the kit is shown in the figure below and it is comp
 
 ## Getting Started
 
+In order to correctly install a new platform, it is necessary to have a unique platform ID of the form:
+
+> MP-A000xx
+
+### Configuration of the central HUB
+Open the terminal and rename the Rasperry Pi:
+
+```
+sudo nano /etc/hostname
+```
+
+Save with > ctrl+x
+
 
 
 
