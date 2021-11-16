@@ -78,7 +78,11 @@ Open the terminal and rename the Rasperry Pi:
 sudo nano /etc/hostname
 ```
 
-Save with >ctrl+x and >reboot
+Save with:
+> ctrl+x 
+
+Then reboot:
+> reboot
 
 ### Check platform ID
 
@@ -111,7 +115,10 @@ Open the application, fill the form and sign-in. Use >Add Platform button.
 
 ### Final association
 Reboot the Rasperry Pi (within 5 minutes) and the association will be automatically completed without additional steps. \
-If the association fails, run >autorun file or >reboot
+If the association fails, run 
+> autorun 
+or 
+> reboot
 
 ## Description
 
