@@ -78,9 +78,33 @@ Open the terminal and rename the Rasperry Pi:
 sudo nano /etc/hostname
 ```
 
-Save with > ctrl+x
+Save with >ctrl+x and >reboot
 
+### Check platform ID
 
+```
+hostname
+```
+
+### Clone the repository
+
+```
+git clone https://github.com/AndreaAvignone/Monitoring-Platform-kit.git
+```
+
+### Setup
+
+Entering the correct path:
+
+```
+cd Monitoring-Platform-kit
+```
+
+Run the installation:
+
+```
+python3 install.py
+```
 
 
 ## Description
