@@ -77,4 +77,4 @@ A possible implementation of the kit is shown in the figure below and it is comp
 ## Links
 
 ## License
-
+[GPL-3.0](./LICENSE)
