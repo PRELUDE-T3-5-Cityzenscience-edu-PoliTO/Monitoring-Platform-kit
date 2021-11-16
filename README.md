@@ -67,7 +67,7 @@ A possible implementation of the kit is shown in the figure below and it is comp
 
 ## Getting Started
 
-In order to correctly install a new platform, it is necessary to have a unique platform ID of the form:
+In order to correctly install a new platform, it is necessary to have a unique platform ID:
 
 > MP-A000xx
 
