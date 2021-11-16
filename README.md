@@ -106,6 +106,12 @@ Run the installation:
 python3 install.py
 ```
 
+### Registration
+Open the application, fill the form and sign-in. Use >Add Platform button.
+
+### Final association
+Reboot the Rasperry Pi (within 5 minutes) and the association will be automatically completed without additional steps. \
+If the association fails, run >autorun file or >reboot
 
 ## Description
 
