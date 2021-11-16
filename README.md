@@ -20,14 +20,14 @@ The source code for the Android Application:
 
 
 ## Hardware kit architecture overview
-The main functionality of the hardware kit is to collect raw data from sensors. The system is implemented to be flexible and capable of supporting different types of sensors which are handled by a Raspbery Pi and an Arduino module. Furthermore the first is in charge of the communications with the server while the latter is used as an ADC for supporting analog devices. 
+The main functionality of the hardware kit is to collect raw data from sensors. The system is implemented to be flexible and capable of supporting different types of sensors which are handled by a Raspbery Pi and an Arduino module. Furthermore, the former is in charge of the communications with the server while the latter is used as an ADC for supporting analog devices. 
 The parameters required for an accurate functioning of the platform are:
 * Air Temperature
 * Relative Humidity
 * Globe Temperature
 * Air velocity
 
-In addition to the sensors needed for providing the described parameters and the Raspberry and Arduino modules, a breadboard kit is required to handle the connections and a display can be included to visualize real-time metrics. 
+In addition to sensors needed for providing the described parameters and the Raspberry and Arduino modules, a breadboard kit is required to handle the connections and a display to visualize real-time metrics. 
 
 ## Tested configuration
 A possible implementation of the kit is shown in the figure below and it is composed by:
