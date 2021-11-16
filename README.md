@@ -12,11 +12,11 @@ This repository can be used to setup a new platform hardware kit.
 
 The main repostiory for the initial set up and the monitoring platform back-end is retrievable here:
 
-> [https://github.com/AndreaAvignone/PMV-Monitoring-Platform](url)
+> https://github.com/AndreaAvignone/PMV-Monitoring-Platform
 
 The source code for the Android Application:
 
-> [https://github.com/AndreaAvignone/myComfort](url)
+> https://github.com/AndreaAvignone/myComfort
 
 
 ## Hardware kit architecture overview
