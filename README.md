@@ -25,7 +25,7 @@ The main repostiory for the initial set up and the monitoring platform back-end 
 
 The source code for the Android Application:
 
-> https://github.com/AndreaAvignone/myComfort
+> https://github.com/PRELUDE-T3-5-Cityzenscience-edu-PoliTO/myComfort
 
 **short overview on the repostiory for setup a new platform**
 
@@ -72,7 +72,7 @@ A possible implementation of the kit is shown in the figure below and it is comp
 * Breadboard kit
 
 
-<img src="https://github.com/AndreaAvignone/Monitoring-Platform-kit/blob/main/IP_kit_circuit_bb.png" alt="SensorKit_scheme" width="700"/>
+<img src="https://github.com/PRELUDE-T3-5-Cityzenscience-edu-PoliTO/Monitoring-Platform-kit/blob/main/IP_kit_circuit_bb.png" alt="SensorKit_scheme" width="700"/>
 
 
 ## Getting Started
