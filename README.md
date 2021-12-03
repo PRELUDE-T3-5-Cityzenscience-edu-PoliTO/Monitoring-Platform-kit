@@ -1,6 +1,10 @@
-# Monitoring-Platform-kit
+# Thermal Comfort Monitoring-Platform
+**Repostiory for setup a new platform**
+![](https://www.politocomunica.polito.it/var/politocomunica/storage/images/media/images/marchio_e_logotipo_politecnico_di_torino/55127-3-ita-IT/marchio_e_logotipo_politecnico_di_torino_full.png) 
 
-![](http://www.politocomunica.polito.it/var/politocomunica/storage/images/media/images/marchio_logotipo_politecnico/1371-1-ita-IT/marchio_logotipo_politecnico_large.jpg) 
+This repository is part of the PAPER...
+
+> **This project is part of the PRELUDE project Citizenscience and education activities (T9.5-PoliTO) - see note**
 
 > **Master course in ICT FOR SMART SOCIETIES**
 
@@ -8,16 +12,22 @@
 
 *Considering the high price solutions for indoor thermal comfort monitoring, this project proposes a low-cost IoT sensor network (exploiting Raspberry Pi and Arduino platforms) for collecting real-time data and evaluating specific thermal comfort indicators (PMV and PPD). The overall architecture was accordingly designed, implementing the hardware setup, the back-end and the Android user interface. Eventually, three distinct platforms were deployed for testing the general system and analyzing the obtained results in different places and seasons, based on collected data and users’ preferences.*
 
+**Description and extra-contents are available at: ...PAPER link...**
+
+Note: For information on the EU H2020 PRELUDE please visit the project site: https://prelude-project.eu/ - PRELUDE received funding from the European Union's Horizon 2020 research and innovation programme under Grant Agreement N. 958345
+
+#
 This repository can be used to setup a new platform hardware kit.
 
 The main repostiory for the initial set up and the monitoring platform back-end is retrievable here:
 
-> https://github.com/AndreaAvignone/PMV-Monitoring-Platform
+> https://github.com/PRELUDE-T3-5-Cityzenscience-edu-PoliTO/PMV-Monitoring-Platform
 
 The source code for the Android Application:
 
 > https://github.com/AndreaAvignone/myComfort
 
+**short overview on the repostiory for setup a new platform**
 
 ## Hardware kit architecture overview
 The main functionality of the hardware kit is to collect raw data from sensors. The system is implemented to be flexible and capable of supporting different types of sensors which are handled by a Raspbery Pi and an Arduino module. Furthermore, the former is in charge of the communications with the server while the latter is used as an ADC for supporting analog devices. 
@@ -93,7 +103,8 @@ hostname
 ### Clone the repository
 
 ```
-git clone https://github.com/AndreaAvignone/Monitoring-Platform-kit.git
+git clone https://github.com/PRELUDE-T3-5-Cityzenscience-edu-PoliTO/Monitoring-Platform-kit.git
+
 ```
 
 ### Setup
