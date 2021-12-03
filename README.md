@@ -2,7 +2,6 @@
 **Repostiory for setup a new platform**
 ![](https://www.politocomunica.polito.it/var/politocomunica/storage/images/media/images/marchio_e_logotipo_politecnico_di_torino/55127-3-ita-IT/marchio_e_logotipo_politecnico_di_torino_full.png) 
 
-This repository is part of the PAPER...
 
 > **This project is part of the PRELUDE project Citizenscience and education activities (T9.5-PoliTO) - see note**
 
